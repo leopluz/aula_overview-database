@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  oracle:
+    image: container-registry.oracle.com/database/express:21.3.0-xe
+    restart: always
+    ports:
+      - "1521:1521"
+      - "5500:5500"
+    volumes:
+      - /var/docker-storage/oracle:/opt/oracle/oradata
+    environment:
+      ORACLE_ALLOW_REMOTE: "true"
+      ORACLE_PASSWORD: sua_senha
