@@ -1,24 +1,40 @@
-# Conteúdo apresentado na Aula de Overview de banco de dados
+# Aula de Overview de Banco de Dados
 
-Possui a informação para criação de contâiner Docker dos bancos de dados:
+## Execução 
+
+Criação de contâiner Docker dos bancos de dados:
 
 - [MySQL](mysql)
 - [PostgreSQL](postgresql)
 - [Oracle XE](oracle)
 
-Para inicializar: executar o shellscript **start_docker.sh** 
+### Inicializar
 
-Para finalizar: executar o shellscript **stop_docker.sh**
+Executar o shellscript `start_docker.sh`
+
+### Finalizar
+
+Executar o shellscript `stop_docker.sh`
+
+### Visualizar Logs
 
 Para visualizar os logs: `docker logs  <nome_do_container>`
 
-## Situações apresentadas
+## Ocorrências
 
-### MySQL
+### MySQL: Connection refused
 
-#### Connection refused
+#### Situação 
 
-- **Situação:** Ao tentar conectar no MySQL através do phpMyAdmin era apresenato o erro: `mysqli::real_connect(): (HY000/2002): Connection refused`
-- **Solução:** Aguardar a inicialização do banco de dados MySQL
-- **Causa:** Isso ocorre pelo fato da inicialização do banco de dados MySQL demorar ao realizar a preparação dos seus dados, principalmente na primeira vez em que ele é executado. Item *No connections until MySQL init completes* [MySQL Docker Hub - Quick reference](https://hub.docker.com/_/mysql).
+Ao tentar conectar no MySQL através do phpMyAdmin é apresenato o erro: `mysqli::real_connect(): (HY000/2002): Connection refused`
+
+#### Solução
+
+Aguardar a inicialização do banco de dados MySQL
+
+#### Causa
+
+Isso ocorre pelo fato da inicialização do banco de dados MySQL demorar ao realizar a preparação dos seus dados, principalmente na primeira vez em que ele é executado.
+
+Fonte: Item *No connections until MySQL init completes* [MySQL Docker Hub - Quick reference](https://hub.docker.com/_/mysql).
 
