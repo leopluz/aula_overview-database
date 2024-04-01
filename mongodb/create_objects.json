@@ -1,0 +1,127 @@
+[
+    {
+      "id_matricula": 1,
+      "aluno": {
+        "id_aluno": 1,
+        "nome": "João Silva",
+        "data_nascimento": "2000-01-10",
+        "endereco": "Rua A, 123",
+        "email": "joao.silva@example.com",
+        "telefone": "(11) 1234-5678"
+      },
+      "turma": {
+        "id_turma": 101,
+        "nome_turma": "Matemática",
+        "ano": 2023,
+        "semestre": "1º Semestre"
+      },
+      "disciplina": {
+        "id_disciplina": 1,
+        "nome_disciplina": "Cálculo",
+        "codigo_disciplina": "CALC101",
+        "professor_responsavel": "Prof. Carlos",
+        "carga_horaria": 60
+      },
+      "nota": null
+    },
+    {
+      "id_matricula": 2,
+      "aluno": {
+        "id_aluno": 2,
+        "nome": "Maria Souza",
+        "data_nascimento": "1998-05-15",
+        "endereco": "Av. B, 456",
+        "email": "maria.souza@example.com",
+        "telefone": "(22) 9876-5432"
+      },
+      "turma": {
+        "id_turma": 102,
+        "nome_turma": "História",
+        "ano": 2023,
+        "semestre": "1º Semestre"
+      },
+      "disciplina": {
+        "id_disciplina": 2,
+        "nome_disciplina": "Revolução Francesa",
+        "codigo_disciplina": "HIS101",
+        "professor_responsavel": "Prof. Ana",
+        "carga_horaria": 40
+      },
+      "nota": null
+    },
+    {
+      "id_matricula": 3,
+      "aluno": {
+        "id_aluno": 3,
+        "nome": "Pedro Santos",
+        "data_nascimento": "1999-09-20",
+        "endereco": "Rua C, 789",
+        "email": "pedro.santos@example.com",
+        "telefone": "(33) 4567-8901"
+      },
+      "turma": {
+        "id_turma": 103,
+        "nome_turma": "Biologia",
+        "ano": 2023,
+        "semestre": "1º Semestre"
+      },
+      "disciplina": {
+        "id_disciplina": 3,
+        "nome_disciplina": "Genética",
+        "codigo_disciplina": "BIO101",
+        "professor_responsavel": "Prof. Maria",
+        "carga_horaria": 50
+      },
+      "nota": null
+    },
+    {
+      "id_matricula": 4,
+      "aluno": {
+        "id_aluno": 1,
+        "nome": "João Silva",
+        "data_nascimento": "2000-01-10",
+        "endereco": "Rua A, 123",
+        "email": "joao.silva@example.com",
+        "telefone": "(11) 1234-5678"
+      },
+      "turma": {
+        "id_turma": 102,
+        "nome_turma": "História",
+        "ano": 2023,
+        "semestre": "1º Semestre"
+      },
+      "disciplina": {
+        "id_disciplina": 2,
+        "nome_disciplina": "Revolução Francesa",
+        "codigo_disciplina": "HIS101",
+        "professor_responsavel": "Prof. Ana",
+        "carga_horaria": 40
+      },
+      "nota": null
+    },
+    {
+      "id_matricula": 5,
+      "aluno": {
+        "id_aluno": 1,
+        "nome": "João Silva",
+        "data_nascimento": "2000-01-10",
+        "endereco": "Rua A, 123",
+        "email": "joao.silva@example.com",
+        "telefone": "(11) 1234-5678"
+      },
+      "turma": {
+        "id_turma": 103,
+        "nome_turma": "Biologia",
+        "ano": 2023,
+        "semestre": "1º Semestre"
+      },
+      "disciplina": {
+        "id_disciplina": 3,
+        "nome_disciplina": "Genética",
+        "codigo_disciplina": "BIO101",
+        "professor_responsavel": "Prof. Maria",
+        "carga_horaria": 50
+      },
+      "nota": null
+    }
+  ]
