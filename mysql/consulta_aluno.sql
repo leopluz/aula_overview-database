@@ -1,3 +1,4 @@
+-- Consulta das informações dos alunos presentes numa Matrícula
 SELECT 
 	m.*, 
     a.nome, 
@@ -8,6 +9,7 @@ FROM
 WHERE
 	m.id_aluno = a.id_aluno;
 
+-- Usando LEFT JOIN
 SELECT 
 	m.*, 
     a.nome, 
@@ -15,4 +17,16 @@ SELECT
 FROM 
     matricula m
     LEFT JOIN aluno a
+        on m.id_aluno = a.id_aluno;
+
+
+
+-- Usando RIGHT JOIN
+SELECT 
+	m.*, 
+    a.nome, 
+    a.email 
+FROM 
+    matricula m
+    RIGHT JOIN aluno a
         on m.id_aluno = a.id_aluno;

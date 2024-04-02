@@ -23,3 +23,9 @@ INSERT INTO matricula (id_matricula, id_aluno, id_turma, id_disciplina, nota) VA
 (3, 3, 103, 3, NULL),  -- Pedro Santos matriculado na turma de Biologia para a disciplina de Genética
 (4, 1, 102, 2, NULL),  -- João Silva matriculado na turma de História para a disciplina de Revolução Francesa
 (5, 1, 103, 3, NULL);  -- João Silva matriculado na turma de Biologia para a disciplina de Genética
+
+
+
+INSERT INTO aluno (id_aluno, nome, data_nascimento, endereco, email, telefone) VALUES
+(4, 'Julia Fagundes', STR_TO_DATE('2003-05-30', '%Y-%m-%d'), 'Rua D, 1011', 'julia.fagundes@example.com', '(44) 2345-6789'),
+(5, 'Carlos Peixoto', STR_TO_DATE('1978-12-15', '%Y-%m-%d'), 'Av. E, 1213', 'carlos.peixoto@example.com', '(55) 1234-5678');
