@@ -2,51 +2,65 @@
 
 ## Execução
 
-Criação de contâiner Docker dos bancos de dados:
+Informações específicas para criação de contâiner Docker dos bancos de dados:
 
-- [MySQL](mysql)
+- [MySQL/MariaDB](mysql)
 - [PostgreSQL](postgresql)
 - [Oracle XE](oracle)
 - [MongoDB](mongodb)
 - [Cassandra](cassandra)
 - [Redis](redis)
 
+### Permissão para execução dos Shell scripts
+
+Para adicionar a permissão de execução para os arquivos *start_docker.sh* e *stop_docker.sh* na estrutura de diretórios, entre no diretório do projeto [aula_overview-database](./) e execute o seguinte comando:
+
+```bash
+find ./ -type f \( -name "start_docker.sh" -o -name "stop_docker.sh" \) -exec chmod o+x {} \;
+```
+
+### Diretório contendo mapeamento dos volumes
+
+Por padrão, todos os containers estão configurados para salvar no diretório */var/docker-storage*, portanto antes de qualquer execução é necessário criar esse diretório com permissão de escrita.
+
+```bash
+mkdir /var/docker-storage
+chmod 766 /var/docker-storage
+```
+
 ### Inicializar o Contâiner
+
+Entre no diretório desejado (onde encontra-se o arquivo *docker-compose.yml*) e execute:
 
 ```bash
 ./start_docker.sh
 ```
 
+ou
+
+```bash
+docker-compose up -d
+```
+
+
 ### Finalizar o Contâiner
+
+Entre no diretório desejado (onde encontra-se o arquivo *docker-compose.yml*) e execute:
 
 ```bash
 ./stop_docker.sh
 ```
 
+ou
+
+```bash
+docker-compose stop
+```
+
 ### Visualizar Logs do Contâiner
+
+Entre no diretório desejado (onde encontra-se o arquivo *docker-compose.yml*) e execute:
 
 ```bash
 docker logs  <nome_do_container>
 ```
-
-## Ocorrências
-
-### MySQL: Connection refused
-
-#### Situação 
-
-Ao tentar conectar no MySQL através do phpMyAdmin é apresenato o erro:
-
-```bash
-mysqli::real_connect(): (HY000/2002): Connection refused
-```
-
-#### Solução
-
-Aguardar a inicialização do banco de dados MySQL
-
-#### Causa
-
-Isso ocorre pelo fato da inicialização do banco de dados MySQL demorar ao realizar a preparação dos seus dados, principalmente na primeira vez em que ele é executado.
-
-Fonte: "*No connections until MySQL init completes*" em [MySQL Docker Hub - Quick reference](https://hub.docker.com/_/mysql).
