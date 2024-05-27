@@ -3,5 +3,6 @@
         "$group": { "_id": "$aluno.id_aluno", 
         "nome": { "$first": "$aluno.nome" },
         "média": { "$avg": "$nota" },
-        "disciplinas": { "$push": "$disciplina.nome_disciplina" } } }
+        "disciplinas": { "$push": "$disciplina.nome_disciplina" } }
+    }
 ]
